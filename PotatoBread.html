@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         /* 이서윤체 폰트 적용을 위한 코드 */
+      @font-face {
+        font-family: "LeeSeoyun";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+      body{
+        font-family: "LeeSeoyun";
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        background-image: url("./background.jpg");
+        width: 100%;
+      }
+
+      .container{
+        width: 500px;
+        background-image:url(background_potato.png);
+        height : 100%;
+        margin: 10px 0 0 0px;
+
+        border-radius: 10px;
+        
+      }
+      .container img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .photos{
+        margin-top: 50px;
+        display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         grid-column-gap: 20px;
+         grid-row-gap: 20px;
+         margin-left: 20px;
+         margin-right: 20px;
+      }
+      
+      .photo-frame {
+        background-color: white;
+        margin:0;
+        height : 300px;
+        background-size: cover;
+
+        border-radius: 10px;
+        position:relative ;
+      }
+
+      .footer{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+      }
+
+      .f-title{
+        color : rgba(145, 94, 61, 0.432);
+        font-size :25px;
+        font-weight:900;
+      }
+      
+      .f-date{
+        color: rgba(145, 94, 61, 0.432);
+        font-size: 15px;
+        font-weight: 500;
+      }
+      
+      #image1 {
+        background-image: url("Jjanggu.png");
+
+      }
+      #image2 {
+        background-image: url("buriburi.png");
+
+      }
+      #image3 {
+        background-image: url("chulsoo.jpg");
+ 
+      }
+      #image4 {
+        background-image: url("Hoon.png");
+
+      }
+
+      .photo_description{
+        font-size: 15px;
+        color: white;
+        background-color: black;
+
+        width: fit-content;
+        padding: 10px 10px;
+        margin-bottom: 10px;
+
+        border-radius: 10px;
+        position: absolute;
+        bottom: 0;
+        
+        transform:  translate(-50%);
+        left: 50%;
+      }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div class ="photos">
+            
+            <div id="image1" class="photo-frame"> 
+                <span id="desc1" class="photo_description">
+                    짱구
+                </span>
+            </div>
+            <div id="image2" class="photo-frame"> 
+                <span id="desc2" class="photo_description">
+                    부리부리마왕
+                </span>
+            </div>
+            <div id="image3" class="photo-frame"> 
+                <span id="desc3" class="photo_description">
+                    철수
+                </span>
+            </div>
+            <div id="image4" class="photo-frame"> 
+                <span id="desc4" class="photo_description">
+                    흰둥이
+                </span>
+            </div>
+        </div>
+        <div class ="footer">
+            <p class="f-title">- 감 자 빵 필 름 -</p>
+            <p class="f-date">
+                <script>
+                    date = new Date().toLocaleDateString();
+                    document.write(date);
+                    </script>
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
